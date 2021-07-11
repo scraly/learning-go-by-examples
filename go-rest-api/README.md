@@ -36,7 +36,7 @@ $ curl http://localhost:8080/hello/aurelie
 
 ### Request & Response Examples
 
-Swagger doc: [http-go-server](https://github.com/scraly/learning-by-examples/go-rest-api/doc/index.html)
+Swagger doc: [go-rest-api](https://github.com/scraly/learning-by-examples/go-rest-api/doc/index.html)
 
 |                 URL					 | Port | HTTP Method			       | Operation														    |
 |:-------------------------:|:--------:|:-----------------------:|------------------------------------------------------------------------|
