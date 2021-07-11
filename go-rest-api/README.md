@@ -31,7 +31,7 @@ $ curl http://localhost:8080/healthz
 OK
 
 $ curl http://localhost:8080/hello/aurelie
-
+"Hello aurelie!"
 ```
 
 ### Request & Response Examples
