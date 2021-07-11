@@ -1,7 +1,4 @@
 version: "3"
-
-vars:
-    PKGS: {sh: GOFLAGS=-mod=vendor go list ./... | grep -vE -e /vendor/ -e /pkg/swagger/}
     
 tasks:
     build:
@@ -9,7 +6,7 @@ tasks:
         cmds:
         - go build -o bin/go-rest-api internal/main.go 
 
-    generate:
+    swagger.gen:
         desc: generate Go code
         cmds:
         - GOFLAGS=-mod=vendor go generate github.com/scraly/learning-go-by-examples/go-rest-api/internal
