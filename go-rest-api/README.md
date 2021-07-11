@@ -6,6 +6,8 @@ We use:
 * Gorilla mux to handle routes
 * Swagger in order to serve a REST API compliant with OpenAPI specs
 
+go-rest-api use [Taskfile](https://dev.to/stack-labs/introduction-to-taskfile-a-makefile-alternative-h92) (a Makefile alternative). 
+
 ## Pre-requisits
 
 Install Go in 1.16 version minimum.
@@ -16,7 +18,7 @@ Install Go in 1.16 version minimum.
 
 or
 
-`$ make build`
+`$ task build`
 
 ## Run the app
 
