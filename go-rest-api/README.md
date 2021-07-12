@@ -48,7 +48,7 @@ dr-who: PNG image data, 1700 x 1460, 8-bit/color RGBA, non-interlaced
 
 ### Request & Response Examples
 
-Swagger doc: [go-rest-api](https://github.com/scraly/learning-by-examples/go-rest-api/doc/index.html)
+Swagger doc: [go-rest-api](https://github.com/scraly/learning-go-by-examples/blob/main/go-rest-api/doc/index.html)
 
 |                 URL					 | Port | HTTP Method			       | Operation														    |
 |:-------------------------:|:--------:|:-----------------------:|------------------------------------------------------------------------|
