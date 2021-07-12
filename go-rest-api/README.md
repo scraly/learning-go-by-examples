@@ -24,6 +24,10 @@ or
 
 `$ ./bin/go-rest-api`
 
+or
+
+`$ task run`
+
 ## Test the app
 
 ```
@@ -32,6 +36,14 @@ OK
 
 $ curl http://localhost:8080/hello/aurelie
 "Hello aurelie!"
+
+$ curl -O localhost:8080/gopher/dr-who
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  992k    0  992k    0     0  9185k      0 --:--:-- --:--:-- --:--:-- 9185k
+
+$ file dr-who
+dr-who: PNG image data, 1700 x 1460, 8-bit/color RGBA, non-interlaced
 ```
 
 ### Request & Response Examples
@@ -42,7 +54,7 @@ Swagger doc: [go-rest-api](https://github.com/scraly/learning-by-examples/go-res
 |:-------------------------:|:--------:|:-----------------------:|------------------------------------------------------------------------|
 | /healthz							 | 8080 | GET       |  Test if the app is running							    |
 | /hello/{name}							 | 8080 | GET       |  Returns message with {name} provided in the query							    |						    |
-
+| /gopher/{name}							 | 8080 | GET       |  Returns gopher image by {name} provided in the query							    |						    |
 
 `$ curl localhost:8080/hello/aurelie`
 
