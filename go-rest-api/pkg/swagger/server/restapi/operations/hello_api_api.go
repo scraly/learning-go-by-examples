@@ -40,9 +40,13 @@ func NewHelloAPIAPI(spec *loads.Document) *HelloAPIAPI {
 
 		JSONConsumer: runtime.JSONConsumer(),
 
+		BinProducer:  runtime.ByteStreamProducer(),
 		JSONProducer: runtime.JSONProducer(),
 		TxtProducer:  runtime.TextProducer(),
 
+		GetGopherNameHandler: GetGopherNameHandlerFunc(func(params GetGopherNameParams) middleware.Responder {
+			return middleware.NotImplemented("operation GetGopherName has not yet been implemented")
+		}),
 		GetHelloUserHandler: GetHelloUserHandlerFunc(func(params GetHelloUserParams) middleware.Responder {
 			return middleware.NotImplemented("operation GetHelloUser has not yet been implemented")
 		}),
@@ -81,6 +85,9 @@ type HelloAPIAPI struct {
 	//   - application/json
 	JSONConsumer runtime.Consumer
 
+	// BinProducer registers a producer for the following mime types:
+	//   - image/png
+	BinProducer runtime.Producer
 	// JSONProducer registers a producer for the following mime types:
 	//   - application/json
 	JSONProducer runtime.Producer
@@ -88,6 +95,8 @@ type HelloAPIAPI struct {
 	//   - text/plain
 	TxtProducer runtime.Producer
 
+	// GetGopherNameHandler sets the operation handler for the get gopher name operation
+	GetGopherNameHandler GetGopherNameHandler
 	// GetHelloUserHandler sets the operation handler for the get hello user operation
 	GetHelloUserHandler GetHelloUserHandler
 	// CheckHealthHandler sets the operation handler for the check health operation
@@ -165,6 +174,9 @@ func (o *HelloAPIAPI) Validate() error {
 		unregistered = append(unregistered, "JSONConsumer")
 	}
 
+	if o.BinProducer == nil {
+		unregistered = append(unregistered, "BinProducer")
+	}
 	if o.JSONProducer == nil {
 		unregistered = append(unregistered, "JSONProducer")
 	}
@@ -172,6 +184,9 @@ func (o *HelloAPIAPI) Validate() error {
 		unregistered = append(unregistered, "TxtProducer")
 	}
 
+	if o.GetGopherNameHandler == nil {
+		unregistered = append(unregistered, "GetGopherNameHandler")
+	}
 	if o.GetHelloUserHandler == nil {
 		unregistered = append(unregistered, "GetHelloUserHandler")
 	}
@@ -224,6 +239,8 @@ func (o *HelloAPIAPI) ProducersFor(mediaTypes []string) map[string]runtime.Produ
 	result := make(map[string]runtime.Producer, len(mediaTypes))
 	for _, mt := range mediaTypes {
 		switch mt {
+		case "image/png":
+			result["image/png"] = o.BinProducer
 		case "application/json":
 			result["application/json"] = o.JSONProducer
 		case "text/plain":
@@ -268,6 +285,10 @@ func (o *HelloAPIAPI) initHandlerCache() {
 		o.handlers = make(map[string]map[string]http.Handler)
 	}
 
+	if o.handlers["GET"] == nil {
+		o.handlers["GET"] = make(map[string]http.Handler)
+	}
+	o.handlers["GET"]["/gopher/{name}"] = NewGetGopherName(o.context, o.GetGopherNameHandler)
 	if o.handlers["GET"] == nil {
 		o.handlers["GET"] = make(map[string]http.Handler)
 	}

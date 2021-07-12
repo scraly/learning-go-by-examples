@@ -13,6 +13,7 @@
 //    - application/json
 //
 //  Produces:
+//    - image/png
 //    - application/json
 //    - text/plain
 //

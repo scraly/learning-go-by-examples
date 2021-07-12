@@ -34,6 +34,31 @@ func init() {
     "version": "0.1.0"
   },
   "paths": {
+    "/gopher/{name}": {
+      "get": {
+        "description": "Return the Gopher Image",
+        "produces": [
+          "image/png"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "description": "The name of the Gopher to display.",
+            "name": "name",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the gopher.",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
     "/healthz": {
       "get": {
         "produces": [
@@ -97,6 +122,31 @@ func init() {
     "version": "0.1.0"
   },
   "paths": {
+    "/gopher/{name}": {
+      "get": {
+        "description": "Return the Gopher Image",
+        "produces": [
+          "image/png"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "description": "The name of the Gopher to display.",
+            "name": "name",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the gopher.",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
     "/healthz": {
       "get": {
         "produces": [

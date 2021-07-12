@@ -25,18 +25,35 @@ paths:
             - OK
 
   /hello/{user}:
-      get:
-        description: Returns a greeting to the user!
-        parameters:
-          - name: user
-            in: path
+    get:
+      description: Returns a greeting to the user!
+      parameters:
+        - name: user
+          in: path
+          type: string
+          required: true
+          description: The name of the user to greet.
+      responses:
+        200:
+          description: Returns the greeting.
+          schema:
             type: string
-            required: true
-            description: The name of the user to greet.
-        responses:
-          200:
-            description: Returns the greeting.
-            schema:
-              type: string
-          400:
-            description: Invalid characters in "user" were provided.
+        400:
+          description: Invalid characters in "user" were provided.
+  
+  /gopher/{name}:
+    get:
+      description: Return the Gopher Image
+      produces:
+      - image/png
+      parameters:
+        - name: name
+          in: path
+          type: string
+          required: true
+          description: The name of the Gopher to display.
+      responses:
+        200:
+          description: Returns the gopher.
+          schema:
+            type: file
