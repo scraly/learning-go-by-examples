@@ -12,7 +12,7 @@ tasks:
         - GOFLAGS=-mod=mod go run internal/main.go
 
     swagger.gen:
-        desc: generate Go code
+        desc: Generate Go code
         cmds:
         - GOFLAGS=-mod=mod go generate github.com/scraly/learning-go-by-examples/go-rest-api/internal github.com/scraly/learning-go-by-examples/go-rest-api/pkg/swagger
 
