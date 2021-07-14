@@ -30,7 +30,7 @@ func init() {
   "swagger": "2.0",
   "info": {
     "description": "HTTP server in Go with Swagger endpoints definition",
-    "title": "http-go-server",
+    "title": "go-rest-api",
     "version": "0.1.0"
   },
   "paths": {
@@ -118,7 +118,7 @@ func init() {
   "swagger": "2.0",
   "info": {
     "description": "HTTP server in Go with Swagger endpoints definition",
-    "title": "http-go-server",
+    "title": "go-rest-api",
     "version": "0.1.0"
   },
   "paths": {
