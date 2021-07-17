@@ -1,10 +1,10 @@
 # go-gopher-cli
 
-This repo contains a simple CLi application in Go, with a basic code organization.
+This repo contains a simple CLI (Command Line Interface) application in Go, with a basic code organization.
 We use:
-* net/http package to start and serve HTTP server
+* net/http package to retrieve our cute Gophers
+* Cobra for creating powerful modern CLI applications
 * Viper to ...
-* Cobra to ...
 
 go-gopher-cli use [Taskfile](https://dev.to/stack-labs/introduction-to-taskfile-a-makefile-alternative-h92) (a Makefile alternative). 
 
