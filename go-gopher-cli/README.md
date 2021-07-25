@@ -1,5 +1,7 @@
 # go-gopher-cli
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/scraly/learning-go-by-examples)](https://goreportcard.com/report/github.com/scraly/learning-go-by-examples)
+
 This repo contains a simple CLI (Command Line Interface) application in Go, with a basic code organization.
 We use:
 * net/http package to retrieve our cute Gophers
