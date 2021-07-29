@@ -30,7 +30,7 @@ var getCmd = &cobra.Command{
 	Short: "This command will get the desired Gopher",
 	Long:  `This get command will call GitHub respository in order to return the desired Gopher.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		var gopherName = "dr-who.png"
+		var gopherName = "dr-who"
 
 		if len(args) >= 1 && args[0] != "" {
 			gopherName = args[0]
