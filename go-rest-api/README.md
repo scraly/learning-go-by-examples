@@ -8,6 +8,8 @@ We use:
 
 go-rest-api use [Taskfile](https://dev.to/stack-labs/introduction-to-taskfile-a-makefile-alternative-h92) (a Makefile alternative). 
 
+Please read the [Learning Go by examples: part 3 - Create an HTTP REST API Server in Go](https://dev.to/aurelievache/learning-go-by-examples-part-2-create-an-http-rest-api-server-in-go-1cdm) article in order to know more about this Git repository.
+
 ## Pre-requisits
 
 Install Go in 1.16 version minimum.

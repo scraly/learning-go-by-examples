@@ -10,6 +10,8 @@ We use:
 
 go-gopher-cli use [Taskfile](https://dev.to/stack-labs/introduction-to-taskfile-a-makefile-alternative-h92) (a Makefile alternative). 
 
+Please read the [Learning Go by examples: part 3 - Create a CLI app in Go](https://dev.to/aurelievache/learning-go-by-examples-part-3-create-a-cli-app-in-go-1h43) article in order to know more about this Git repository.
+
 ## Pre-requisits
 
 Install Go in 1.16 version minimum.
