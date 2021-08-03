@@ -4,9 +4,8 @@
 
 This repo contains a simple bot for Discord in Go, with a basic code organization.
 We use:
-* xxx
-* xx
-
+* [KuteGo API](https://github.com/gaelleacas/kutego-api): an API that retrieve Gophers (thanks Gaelle :-)
+* [DiscordGo](https://github.com/bwmarrin/discordgo): a Client that interact with Go servers
 
 ## Pre-requisites
 
@@ -45,4 +44,4 @@ task: [bot] ./bin/gopher-bot-discord -t $BOT_TOKEN
 Bot is now running.  Press CTRL-C to exit.
 ```
 
-Now you can tape `!gopher` in the Discord server connected to the Bot ;-).
+Now you can tape `!gopher`, `!gophers` and `!random` in the Discord server connected to the Bot ;-).
