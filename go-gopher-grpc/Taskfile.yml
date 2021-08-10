@@ -1,0 +1,17 @@
+version: "3"
+    
+tasks:
+    build:
+        desc: Build the app
+        cmds:
+        - GOFLAGS=-mod=mod go build -o bin/gopher-grpc main.go 
+
+    run: 
+        desc: Run the app
+        cmds:
+        - GOFLAGS=-mod=mod go run main.go
+
+    generate:
+        desc: Generate Go code from protobuf
+        cmds:
+        - protoc --go_out=plugins=grpc:. --go_opt=paths=source_relative pkg/gopher/gopher.proto

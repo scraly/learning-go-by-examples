@@ -19,7 +19,7 @@ var (
 	Token string
 )
 
-const KuteGoAPIURL = "https://kutego-api-xxxxxx-ew.a.run.app"
+const KuteGoAPIURL = "https://kutego-api-xxxxx-ew.a.run.app"
 
 func init() {
 	flag.StringVar(&Token, "t", "", "Bot Token")

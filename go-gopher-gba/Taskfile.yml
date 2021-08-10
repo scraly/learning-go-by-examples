@@ -1,0 +1,24 @@
+version: "3"
+    
+tasks:
+
+    run: 
+        desc: Run the app
+        cmds:
+        - GOFLAGS=-mod=mod tinygo run -target=gameboy-advance gopher.go
+
+    build:
+        desc: Build the GBA app
+        cmds:
+        - GOFLAGS=-mod=mod tinygo build -size short -o bin/gopher.gba -target=gameboy-advance gopher.go
+
+    build-mgba:
+        desc: Build the GBA app for mGBA
+        cmds:
+        - GOFLAGS=-mod=mod tinygo build -size short -o bin/gopher.elf -target=gameboy-advance gopher.go
+        - mv bin/gopher.elf bin/gopher.gba
+
+    mgba:
+        desc: Load the game
+        cmds:
+        - mgba bin/gopher.gba
