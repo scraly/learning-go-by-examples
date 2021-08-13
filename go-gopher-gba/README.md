@@ -10,7 +10,7 @@ We use:
 * [TinyDraw](https://github.com/tinygo-org/tinydraw)
 * [Gopher font](http://2ttf.com/HCQ3PvcaQ4U) (thanks [@rakyll](https://twitter.com/rakyll) <3)
 
-Please read the [Learning Go by examples: part 5 - xxx](https://dev.to/aurelievache/) article in order to know more about this Git repository.
+Please read the [Learning Go by examples: part 5 - Create a Game Boy Advance (GBA) game in Go](https://dev.to/aurelievache/learning-go-by-examples-part-5-create-a-game-boy-advance-gba-game-in-go-5944) article in order to know more about this Git repository.
 
 ## General
 

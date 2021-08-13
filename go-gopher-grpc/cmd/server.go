@@ -38,7 +38,7 @@ const (
 )
 
 // server is used to implement gopher.GopherServer.
-type server struct {
+type Server struct {
 	pb.UnimplementedGopherServer
 }
 
@@ -60,7 +60,7 @@ var serverCmd = &cobra.Command{
 		grpcServer := grpc.NewServer()
 
 		// Register services
-		pb.RegisterGopherServer(grpcServer, &server{})
+		pb.RegisterGopherServer(grpcServer, &Server{})
 
 		log.Printf("GRPC server listening on %v", lis.Addr())
 
@@ -71,7 +71,7 @@ var serverCmd = &cobra.Command{
 }
 
 // GetGopher implements gopher.GopherServer
-func (s *server) GetGopher(ctx context.Context, req *pb.GopherRequest) (*pb.GopherReply, error) {
+func (s *Server) GetGopher(ctx context.Context, req *pb.GopherRequest) (*pb.GopherReply, error) {
 	res := &pb.GopherReply{}
 
 	// Check request
@@ -88,7 +88,7 @@ func (s *server) GetGopher(ctx context.Context, req *pb.GopherRequest) (*pb.Goph
 	log.Printf("Received: %v", req.GetName())
 
 	//Call KuteGo API in order to get Gopher's URL
-	// https://kutego-api-xxx6dcviaq-ew.a.run.app/gophers?name=back-to-the-future
+	// https://kutego-api-xxxxx-ew.a.run.app/gophers?name=back-to-the-future
 	// [{"name":"back-to-the-future","path":"back-to-the-future.png","url":"https://raw.githubusercontent.com/scraly/gophers/main/back-to-the-future.png"}]
 	response, err := http.Get(KuteGoAPIURL + "/gophers?name=" + req.GetName())
 	if err != nil {
