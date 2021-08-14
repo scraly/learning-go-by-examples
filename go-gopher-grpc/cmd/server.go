@@ -88,11 +88,11 @@ func (s *Server) GetGopher(ctx context.Context, req *pb.GopherRequest) (*pb.Goph
 	log.Printf("Received: %v", req.GetName())
 
 	//Call KuteGo API in order to get Gopher's URL
-	// https://kutego-api-xxxxx-ew.a.run.app/gophers?name=back-to-the-future
+	// https://kutego-api-xxx6dcviaq-ew.a.run.app/gophers?name=back-to-the-future
 	// [{"name":"back-to-the-future","path":"back-to-the-future.png","url":"https://raw.githubusercontent.com/scraly/gophers/main/back-to-the-future.png"}]
 	response, err := http.Get(KuteGoAPIURL + "/gophers?name=" + req.GetName())
 	if err != nil {
-		fmt.Println(err)
+		log.Fatalf("failed to call KuteGoAPI: %v", err)
 	}
 	defer response.Body.Close()
 
@@ -100,14 +100,14 @@ func (s *Server) GetGopher(ctx context.Context, req *pb.GopherRequest) (*pb.Goph
 		// Transform our response to a []byte
 		body, err := ioutil.ReadAll(response.Body)
 		if err != nil {
-			fmt.Println(err)
+			log.Fatalf("failed to read response body: %v", err)
 		}
 
 		// Put only needed informations of the JSON document in our array of Gopher
 		var data []Gopher
 		err = json.Unmarshal(body, &data)
 		if err != nil {
-			fmt.Println(err)
+			log.Fatalf("failed to unmarshal JSON: %v", err)
 		}
 
 		// Create a string with all of the Gopher's name and a blank line as separator
@@ -118,10 +118,8 @@ func (s *Server) GetGopher(ctx context.Context, req *pb.GopherRequest) (*pb.Goph
 
 		res.Message = gophers.String()
 	} else {
-		fmt.Println("Error: Can't get the Gopher! :-(")
+		log.Fatal("Can't get the Gopher :-(")
 	}
-
-	// res.Message = "Hello " + req.Name
 
 	return res, nil
 }
