@@ -88,7 +88,7 @@ func (s *Server) GetGopher(ctx context.Context, req *pb.GopherRequest) (*pb.Goph
 	log.Printf("Received: %v", req.GetName())
 
 	//Call KuteGo API in order to get Gopher's URL
-	// https://kutego-api-xxx6dcviaq-ew.a.run.app/gophers?name=back-to-the-future
+	// https://kutego-api-xxxxx-ew.a.run.app/gophers?name=back-to-the-future
 	// [{"name":"back-to-the-future","path":"back-to-the-future.png","url":"https://raw.githubusercontent.com/scraly/gophers/main/back-to-the-future.png"}]
 	response, err := http.Get(KuteGoAPIURL + "/gophers?name=" + req.GetName())
 	if err != nil {

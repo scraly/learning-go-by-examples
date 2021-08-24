@@ -1,0 +1,28 @@
+version: "3"
+    
+tasks:
+    run: 
+        desc: Run the app
+        cmds:
+        - GOFLAGS=-mod=mod go run main.go
+
+    run-mobile: 
+        desc: Run the app on mobile emulator
+        cmds:
+        - GOFLAGS=-mod=mod go run -tags mobile main.go
+
+    package:
+        desc: Build the app for current OS
+        cmds:
+        # - GOFLAGS=-mod=mod go build -o bin/gopher-desktop main.go 
+        - fyne package -icon gopher.png
+
+    package-android:
+        desc: Package the app for Android
+        cmds:
+        - fyne package -os android -appID com.scraly.gopher -icon gopher.png
+
+    package-ios:
+        desc: Package the app for iOS
+        cmds:
+        - fyne package -os ios -appID com.scraly.gopher -icon gopher.png
