@@ -9,7 +9,7 @@ tasks:
     run: 
         desc: Run the app
         cmds:
-        - GOFLAGS=-mod=mod go run main.go
+        - GOFLAGS=-mod=mod go run main.go {{.CLI_ARGS}}
 
     clean:
         desc: Remove all retrieved *.png files
