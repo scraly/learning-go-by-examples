@@ -14,6 +14,10 @@ Please read the [Learning Go by examples: part 3 - Create an HTTP REST API Serve
 
 Install Go in 1.16 version minimum.
 
+or:
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/scraly/learning-go-by-examples/tree/main/go-rest-api)
+
 ## Build the app
 
 `$ go build -o bin/go-rest-api internal/main.go`
