@@ -30,6 +30,10 @@ Install [TinyGo](https://tinygo.org/getting-started/install/).
 
 Install [mGBA](https://tinygo.org/getting-started/install/macos/) emulator.
 
+or:
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/scraly/learning-go-by-examples/tree/main/go-gopher-gba)
+
 ## Run the app (during development)
 
 ```

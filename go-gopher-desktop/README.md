@@ -14,6 +14,10 @@ Please read the [Learning Go by examples: part 7 - Create a cross-platform GUI/D
 
 Install Go in 1.16 version minimum.
 
+or:
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/scraly/learning-go-by-examples/tree/main/go-gopher-desktop)
+
 ## Run and test the app
 
 `$ task run`

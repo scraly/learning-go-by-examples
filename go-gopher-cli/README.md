@@ -16,6 +16,10 @@ Please read the [Learning Go by examples: part 3 - Create a CLI app in Go](https
 
 Install Go in 1.16 version minimum.
 
+or:
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/scraly/learning-go-by-examples/tree/main/go-gopher-cli)
+
 ## Build the app
 
 `$ go build -o bin/go-gopher-cli main.go`

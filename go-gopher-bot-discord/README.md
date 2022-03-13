@@ -13,6 +13,10 @@ Please read the [Learning Go by examples: part 4 - Create a Bot for Discord in G
 
 Install Go in 1.16 version minimum.
 
+or:
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/scraly/learning-go-by-examples/tree/main/go-gopher-bot-discord)
+
 ## Build the app
 
 `$ go build -o bin/go-gopher-cli main.go`

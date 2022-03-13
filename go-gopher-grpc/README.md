@@ -17,6 +17,10 @@ Please read the [Learning Go by examples: part 6 - xx](xx) article in order to k
 
 Install Go in 1.16 version minimum.
 
+or:
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/scraly/learning-go-by-examples/tree/main/go-gopher-grpc)
+
 ## Generate protoc files
 
 `$ task generate`

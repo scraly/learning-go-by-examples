@@ -1,6 +1,6 @@
 tasks:
   - init: go get -v -t -d ./...
-    command: go run cmd/venom/main.go -h
+    command: go run internal/main.go
 vscode:
   extensions:
     - golang.go
