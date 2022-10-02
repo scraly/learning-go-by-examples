@@ -56,7 +56,7 @@ func NewHelloAPIAPI(spec *loads.Document) *HelloAPIAPI {
 	}
 }
 
-/*HelloAPIAPI HTTP server in Go with Swagger endpoints definition */
+/*HelloAPIAPI HTTP server in Go with Swagger endpoints definition. */
 type HelloAPIAPI struct {
 	spec            *loads.Document
 	context         *middleware.Context

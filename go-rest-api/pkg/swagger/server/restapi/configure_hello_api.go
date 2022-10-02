@@ -10,7 +10,7 @@ import (
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/runtime/middleware"
 
-	"github.com/scraly/learning-go-by-examples/go-rest-api/pkg/swagger/server/restapi/operations"
+	"github.com/lucetre/learning-go-by-examples/go-rest-api/pkg/swagger/server/restapi/operations"
 )
 
 //go:generate swagger generate server --target ../../server --name HelloAPI --spec ../../swagger.yml --principal interface{} --exclude-main

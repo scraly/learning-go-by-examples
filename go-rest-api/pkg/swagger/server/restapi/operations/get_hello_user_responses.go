@@ -14,7 +14,8 @@ import (
 // GetHelloUserOKCode is the HTTP code returned for type GetHelloUserOK
 const GetHelloUserOKCode int = 200
 
-/*GetHelloUserOK Returns the greeting.
+/*
+GetHelloUserOK Returns the greeting.
 
 swagger:response getHelloUserOK
 */
@@ -56,7 +57,8 @@ func (o *GetHelloUserOK) WriteResponse(rw http.ResponseWriter, producer runtime.
 // GetHelloUserBadRequestCode is the HTTP code returned for type GetHelloUserBadRequest
 const GetHelloUserBadRequestCode int = 400
 
-/*GetHelloUserBadRequest Invalid characters in "user" were provided.
+/*
+GetHelloUserBadRequest Invalid characters in "user" were provided.
 
 swagger:response getHelloUserBadRequest
 */

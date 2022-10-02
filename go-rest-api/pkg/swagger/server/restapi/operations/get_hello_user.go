@@ -29,10 +29,10 @@ func NewGetHelloUser(ctx *middleware.Context, handler GetHelloUserHandler) *GetH
 	return &GetHelloUser{Context: ctx, Handler: handler}
 }
 
-/* GetHelloUser swagger:route GET /hello/{user} getHelloUser
+/*
+	GetHelloUser swagger:route GET /hello/{user} getHelloUser
 
 Returns a greeting to the user!
-
 */
 type GetHelloUser struct {
 	Context *middleware.Context

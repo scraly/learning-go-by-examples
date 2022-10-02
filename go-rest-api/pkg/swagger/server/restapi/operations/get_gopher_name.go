@@ -29,10 +29,10 @@ func NewGetGopherName(ctx *middleware.Context, handler GetGopherNameHandler) *Ge
 	return &GetGopherName{Context: ctx, Handler: handler}
 }
 
-/* GetGopherName swagger:route GET /gopher/{name} getGopherName
+/*
+	GetGopherName swagger:route GET /gopher/{name} getGopherName
 
-Return the Gopher Image
-
+Return the Gopher Image.
 */
 type GetGopherName struct {
 	Context *middleware.Context

@@ -7,9 +7,8 @@ import (
 
 	"github.com/go-openapi/loads"
 	"github.com/go-openapi/runtime/middleware"
-	"github.com/scraly/learning-go-by-examples/go-rest-api/pkg/swagger/server/restapi"
-
-	"github.com/scraly/learning-go-by-examples/go-rest-api/pkg/swagger/server/restapi/operations"
+	"github.com/lucetre/learning-go-by-examples/go-rest-api/pkg/swagger/server/restapi"
+	"github.com/lucetre/learning-go-by-examples/go-rest-api/pkg/swagger/server/restapi/operations"
 )
 
 // func main() {
@@ -53,25 +52,25 @@ func main() {
 	}
 }
 
-//Health route returns OK
+// Health route returns OK
 func Health(operations.CheckHealthParams) middleware.Responder {
 	return operations.NewCheckHealthOK().WithPayload("OK")
 }
 
-//GetHelloUser returns Hello + your name
+// GetHelloUser returns Hello + your name
 func GetHelloUser(user operations.GetHelloUserParams) middleware.Responder {
 	return operations.NewGetHelloUserOK().WithPayload("Hello " + user.User + "!")
 }
 
-//GetGopherByName returns a gopher in png
+// GetGopherByName returns a gopher in png
 func GetGopherByName(gopher operations.GetGopherNameParams) middleware.Responder {
 
 	var URL string
 	if gopher.Name != "" {
-		URL = "https://github.com/scraly/gophers/raw/main/" + gopher.Name + ".png"
+		URL = "https://github.com/lucetre/gophers/raw/main/" + gopher.Name + ".png"
 	} else {
 		//by default we return dr who gopher
-		URL = "https://github.com/scraly/gophers/raw/main/dr-who.png"
+		URL = "https://github.com/lucetre/gophers/raw/main/dr-who.png"
 	}
 
 	response, err := http.Get(URL)

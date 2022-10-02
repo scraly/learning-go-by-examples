@@ -29,14 +29,14 @@ func init() {
   ],
   "swagger": "2.0",
   "info": {
-    "description": "HTTP server in Go with Swagger endpoints definition",
+    "description": "HTTP server in Go with Swagger endpoints definition.",
     "title": "go-rest-api",
     "version": "0.1.0"
   },
   "paths": {
     "/gopher/{name}": {
       "get": {
-        "description": "Return the Gopher Image",
+        "description": "Return the Gopher Image.",
         "produces": [
           "image/png"
         ],
@@ -51,7 +51,7 @@ func init() {
         ],
         "responses": {
           "200": {
-            "description": "Returns the gopher.",
+            "description": "Returns the Gopher.",
             "schema": {
               "type": "file"
             }
@@ -67,7 +67,7 @@ func init() {
         "operationId": "checkHealth",
         "responses": {
           "200": {
-            "description": "OK message",
+            "description": "OK message.",
             "schema": {
               "type": "string",
               "enum": [
@@ -117,14 +117,14 @@ func init() {
   ],
   "swagger": "2.0",
   "info": {
-    "description": "HTTP server in Go with Swagger endpoints definition",
+    "description": "HTTP server in Go with Swagger endpoints definition.",
     "title": "go-rest-api",
     "version": "0.1.0"
   },
   "paths": {
     "/gopher/{name}": {
       "get": {
-        "description": "Return the Gopher Image",
+        "description": "Return the Gopher Image.",
         "produces": [
           "image/png"
         ],
@@ -139,7 +139,7 @@ func init() {
         ],
         "responses": {
           "200": {
-            "description": "Returns the gopher.",
+            "description": "Returns the Gopher.",
             "schema": {
               "type": "file"
             }
@@ -155,7 +155,7 @@ func init() {
         "operationId": "checkHealth",
         "responses": {
           "200": {
-            "description": "OK message",
+            "description": "OK message.",
             "schema": {
               "type": "string",
               "enum": [

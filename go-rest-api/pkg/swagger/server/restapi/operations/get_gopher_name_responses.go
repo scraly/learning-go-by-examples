@@ -15,7 +15,8 @@ import (
 // GetGopherNameOKCode is the HTTP code returned for type GetGopherNameOK
 const GetGopherNameOKCode int = 200
 
-/*GetGopherNameOK Returns the gopher.
+/*
+GetGopherNameOK Returns the Gopher.
 
 swagger:response getGopherNameOK
 */
