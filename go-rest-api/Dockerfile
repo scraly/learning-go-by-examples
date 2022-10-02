@@ -1,6 +1,6 @@
 FROM golang:1.18.4-alpine AS build
 
-COPY . /build
+COPY go-rest-api /build
 WORKDIR /build
 RUN go build
 
