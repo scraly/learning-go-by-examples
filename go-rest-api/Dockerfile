@@ -2,7 +2,7 @@ FROM golang:1.18.4-alpine AS build
 
 COPY . /build
 WORKDIR /build
-RUN go build
+RUN GOFLAGS=-mod=mod go build -o bin/go-rest-api internal/main.go
 
 FROM alpine AS final
 
