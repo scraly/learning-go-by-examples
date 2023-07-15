@@ -5,6 +5,9 @@ info:
   version: 0.1.0
 servers:
 - url: /
+tags:
+- description: Handle Gophers
+  name: gophers
 paths:
   /healthz:
     get:
@@ -38,6 +41,8 @@ paths:
             Access-Control-Allow-Origin:
               schema:
                 type: string
+      tags:
+      - gophers
   /gopher:
     delete:
       description: Delete a gopher by a given name
@@ -55,6 +60,8 @@ paths:
         "404":
           content: {}
           description: A gopher with the specified Name was not found.
+      tags:
+      - gophers
     get:
       description: Get a gopher by a given name
       parameters:
@@ -82,6 +89,8 @@ paths:
             Access-Control-Allow-Origin:
               schema:
                 type: string
+      tags:
+      - gophers
     post:
       requestBody:
         content:
@@ -101,6 +110,8 @@ paths:
           content: {}
           description: Gopher already exists
       summary: Add a new Gopher
+      tags:
+      - gophers
       x-codegen-request-body-name: gopher
     put:
       description: Update a gopher
@@ -121,6 +132,8 @@ paths:
         "404":
           content: {}
           description: A gopher with the specified Name was not found.
+      tags:
+      - gophers
       x-codegen-request-body-name: gopher
 components:
   schemas:

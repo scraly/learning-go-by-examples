@@ -78,11 +78,11 @@ All URIs are relative to *http://localhost*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**CheckHealth**](docs/DefaultApi.md#checkhealth) | **Get** /healthz | 
-*DefaultApi* | [**GopherDelete**](docs/DefaultApi.md#gopherdelete) | **Delete** /gopher | 
-*DefaultApi* | [**GopherGet**](docs/DefaultApi.md#gopherget) | **Get** /gopher | 
-*DefaultApi* | [**GopherPost**](docs/DefaultApi.md#gopherpost) | **Post** /gopher | Add a new Gopher
-*DefaultApi* | [**GopherPut**](docs/DefaultApi.md#gopherput) | **Put** /gopher | 
-*DefaultApi* | [**GophersGet**](docs/DefaultApi.md#gophersget) | **Get** /gophers | 
+*GophersApi* | [**GopherDelete**](docs/GophersApi.md#gopherdelete) | **Delete** /gopher | 
+*GophersApi* | [**GopherGet**](docs/GophersApi.md#gopherget) | **Get** /gopher | 
+*GophersApi* | [**GopherPost**](docs/GophersApi.md#gopherpost) | **Post** /gopher | Add a new Gopher
+*GophersApi* | [**GopherPut**](docs/GophersApi.md#gopherput) | **Put** /gopher | 
+*GophersApi* | [**GophersGet**](docs/GophersApi.md#gophersget) | **Get** /gophers | 
 
 
 ## Documentation For Models
