@@ -21,7 +21,7 @@ go get golang.org/x/net/context
 Put the package under your project folder and add the following in import:
 
 ```golang
-import gophers-api "github.com/GIT_USER_ID/GIT_REPO_ID"
+import gophers-api "github.com/scraly/learning-go-by-examples/go-gopher-sdk"
 ```
 
 To use a proxy, set the environment variable `HTTP_PROXY`:
