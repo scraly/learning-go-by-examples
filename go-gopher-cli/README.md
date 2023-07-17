@@ -59,3 +59,18 @@ Perfect! Just saved in friends.png!
 $ file friends.png
 friends.png: PNG image data, 1156 x 882, 8-bit/color RGBA, non-interlaced
 ```
+
+or
+
+```
+$ task run -- [command]
+
+$ task run -- get friends
+task: [run] GOFLAGS=-mod=mod go run main.go get friends
+Try to get 'friends' Gopher...
+Perfect! Just saved in friends.png!
+
+
+$ file friends.png
+friends.png: PNG image data, 1838 x 1408, 8-bit/color RGBA, non-interlaced
+```
