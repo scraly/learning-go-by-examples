@@ -32,6 +32,9 @@ func main() {
 	api := operations.NewHelloAPIAPI(swaggerSpec)
 	server := restapi.NewServer(api)
 
+	// Turn on Swagger UI at /docs
+	api.UseSwaggerUI()
+
 	defer func() {
 		if err := server.Shutdown(); err != nil {
 			// error handle
